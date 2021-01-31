@@ -28,7 +28,6 @@ public class SalariesController {
 
 	@GetMapping(value = "/tous")
 	public List<Salarie> getAllSalaries() {
-		System.out.print("hello");
 		return salariesBusinessCrud.recupererTousLesSalaries();
 	}
 

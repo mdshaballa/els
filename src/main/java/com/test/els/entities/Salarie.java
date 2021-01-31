@@ -8,6 +8,8 @@ import javax.persistence.Entity;
 
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 @Entity
 @Document(collection = "salaries")
 public class Salarie implements Serializable {
@@ -26,6 +28,7 @@ public class Salarie implements Serializable {
 	private String prenom;
 
 	@Column(name = "dateNaissance")
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
 	private Date dateNaissance;
 
 	@Column(name = "fonction")
